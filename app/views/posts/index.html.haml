@@ -1,1 +1,6 @@
 %h1 Pseudogram
+
+-# iterate through each post created and stored in the post model and display image and description
+-@posts.each do |post|
+  =image_tag post.image.url(:medium)
+  =post.description
