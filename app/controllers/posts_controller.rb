@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
 
+	# only logged in users can perform actions
+	before_action :authenticate_user!
+
 	# identify what post the action is being performed on
 	before_action :post_identify, only: [:show, :destroy]
 
