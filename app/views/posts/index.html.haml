@@ -1,6 +1,11 @@
-%h1 Pseudogram
-
--# iterate through each post created and stored in the post model and display image and description
--@posts.each do |post|
-  =image_tag post.image.url(:medium)
-  =post.description
+-# iterate through each post created and stored in the post model and display image and description in rows, description below each image
+.posts-wrapper.row
+  -@posts.each do |post|
+    .post
+      .post-head
+        .name
+          Test name here ahahahah
+      .image.center-block
+        =link_to (image_tag post.image.url(:medium), class:'img-responsive'), post_path(post)
+      %p.description
+        =post.description

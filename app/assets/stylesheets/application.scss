@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+// styling body
+body {
+
+	// fixed background colour
+	background-color: #272727;
+
+    // adding 50px margin to offset nav bar set to top
+	margin-top: 50px;
+
+	// font of choice, Consolas
+	font-family: Consolas,monaco,monospace; 
+}
+
+// styling navigation bar
+.navbar-default {
+	
+	// navbar colour
+	background-color: #f0f0f1;
+	
+	// navbar sizz
+	height: 50px;
+	
+	//navbar elements colour
+	.navbar-nav li a {
+		color: #6d6d74;
+	}
+}
+
+// navbar confined within container
+.navbar-container {
+	width: 640px;
+	margin: 0 auto;
+}
+
+// wrapper for posts displayed
+.posts-wrapper {
+
+	// spacing between first post and top
+	padding-top: 25px;
+
+	margin: 0 auto;
+
+	//max width set to 640, image px set
+	max-width: 640px;
+
+	width: 100%;
+}
+
+// styling post
+.post {
+
+	background-color: #fff;
+
+	margin-bottom: 30px;
+
+	// no specific border colour style or radius set
+}
+
+// username area of post
+.post-head {
+	height: 44px;
+	padding: 14px 20px;
+	color: #000000;
+	font-size: 15px;
+	line-height: 18px;
+	.thumbnail {}
+	.name {
+		display: block;
+	}
+}
+
+// styling post form
+.form-wrapper {
+	width: 30%;
+	margin: 20px auto;
+	background-color: #fff;
+	padding: 40px;
+}
+
+.edit-links {
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
