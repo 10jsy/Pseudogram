@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
 	#resource route for posts controller
 	resources :posts
 
