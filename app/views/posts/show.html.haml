@@ -8,4 +8,4 @@
       %p.description
         =@post.description
       .text-right.action-links
-        =link_to "Delete...?", post_path(@post), style: 'color: #b30000;', method: :destroy, data: {confirm: "This will delete the post... Are you sure?"}
+        =link_to "Delete...?", post_path(@post), style: 'color: #b30000;', method: :delete, data: {confirm: "This will delete the post... Are you sure?"}
