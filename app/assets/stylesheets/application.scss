@@ -69,14 +69,11 @@ body {
 	background-color: #fff;
 
 	margin-bottom: 30px;
-
-	// no specific border colour style or radius set
 }
 
 // username area of post
 .post-head {
-	height: 44px;
-	padding: 14px 20px;
+	height: 20px;
 	color: #000000;
 	font-size: 15px;
 	line-height: 18px;
@@ -94,7 +91,9 @@ body {
 	padding: 40px;
 }
 
-.edit-links {
-	margin-top: 20px;
-	margin-bottom: 40px;
+
+// styling descriptions
+.description {
+	color: #fff;
+
 }

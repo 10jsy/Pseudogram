@@ -1,0 +1,9 @@
+.posts-wrapper.row
+  .post
+    .post-head
+      .name
+        Test name here ahahahah
+      .image.center-block
+        =image_tag @post.image.url(:medium)
+      %p.description
+        =@post.description

@@ -1,12 +1,4 @@
 class PostsController < ApplicationController
-	# private method ie only available within this class
-	private
-
-		def post_params
-			# only image and description accepted
-			params.require(:post).permit(:image, :description)
-		end
-
 	#index controller action 
 	def index
 		# get all posts from database post model to index controller action
@@ -25,5 +17,17 @@ class PostsController < ApplicationController
 		redirect_to posts_path
 	end
 
+	#show controller action to get and display individual posts
+	def show
+		@post = Post.find(params[:id])
+	end
+
+	# private method ie only available within this class
+	private
+
+		def post_params
+			# only image and description accepted
+			params.require(:post).permit(:image, :description)
+		end
 
 end
