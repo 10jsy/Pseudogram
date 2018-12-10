@@ -11,6 +11,6 @@ class Post < ActiveRecord::Base
 	# a post will belong to its uploader ie  user
 	belongs_to :user
 	# and that user will have many posts
-	has_may :posts, dependent :destroy
+	has_many :posts, dependent: :destroy
 
 end

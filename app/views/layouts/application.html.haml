@@ -9,9 +9,9 @@
   %body
     = yield
 
-//- if user_signed_in?
-= render 'layouts/navbarsignedin'
-//- else
-//  = render 'layouts/navbarloggedout'
+- if user_signed_in?
+  = render 'layouts/navbarsignedin'
+- else
+  = render 'layouts/navbarloggedout'
 
 
