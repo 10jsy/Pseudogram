@@ -6,33 +6,38 @@ class PostsController < ApplicationController
 	# identify what post the action is being performed on
 	before_action :post_identify, only: [:show, :destroy]
 
-	#index controller action 
+	# index controller action 
 	def index
 		# get all posts from database post model to index controller action
 		@posts = Post.all
 	end
 
-	#new controller action; create new post with image
+	# new controller action; create new post with image
 	def new
-		@post = Post.new
+		@post = current_user.posts.build
 	end
 
-	#create controller action with private method post_params
+	# create controller action with private method post_params
 	def create
 		# if post is successully created, go to home, else render new
-		if @post = Post.create(post_params)
+		@post = current_user.posts.build(post_params)
+
+		if @post.save
+			flash[:success] = "Successfully posted ✓"
 			redirect_to posts_path
 		else
+			flash[:alert] = "What happened...? 😢"
 			render :new
 		end
+
 	end
 
-	#show controller action to get and display individual posts
+	# show controller action to get and display individual posts
 	def show
 		@post = Post.find(params[:id])
 	end
 
-	#destroy action for deleting posts
+	# destroy action for deleting posts
 	def destroy
 		@post = Post.find(params[:id])
 		@post.destroy
@@ -50,4 +55,6 @@ class PostsController < ApplicationController
 		def post_identify
 			@post = Post.find(params[:id])
 		end
+
+
 end

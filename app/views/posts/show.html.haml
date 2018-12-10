@@ -2,10 +2,12 @@
   .post
     .post-head
       .name
-        =post.user.username
+        =@post.user.username
       .image.center-block
         =image_tag @post.image.url(:medium)
       %p.description
         =@post.description
-      .text-right.action-links
-        =link_to "Delete...?", post_path(@post), style: 'color: #b30000;', method: :delete, data: {confirm: "This will delete the post... Are you sure?"}
+
+      - if @post.user.id == current_user.id #only let user who created the post delete it
+        .text-right.action-links
+          =link_to "Delete...?", post_path(@post), style: 'color: #b30000;', method: :delete, data: {confirm: "This will delete the post... Are you sure?"}
