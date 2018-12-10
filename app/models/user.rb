@@ -8,4 +8,7 @@ class User < ApplicationRecord
 
 	# User will have many posts
 	has_many :posts, dependent: :destroy
+
+	# User will have many comments, if user is destroyed all comments are destroyed
+	has_many :comments, dependent: :destroy
 end

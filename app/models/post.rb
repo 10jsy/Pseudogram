@@ -11,4 +11,7 @@ class Post < ActiveRecord::Base
 	# a post will belong to its uploader ie  user
 	belongs_to :user
 
+	# a post will have many comments, if post is destroyed all comments are destroyed 
+	has_many :comments, dependent: :destroy
+
 end
