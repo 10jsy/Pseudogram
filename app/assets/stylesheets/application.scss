@@ -24,8 +24,12 @@ body {
     // adding 50px margin to offset nav bar set to top
 	margin-top: 50px;
 
+	// 40px margin to offset footer
+	margin-bottom: 40px;
+
 	// font of choice, Consolas
 	font-family: Consolas,monaco,monospace; 
+
 }
 
 // styling navigation bar
@@ -34,7 +38,7 @@ body {
 	// navbar colour
 	background-color: #f0f0f1;
 	
-	// navbar sizz
+	// navbar size
 	height: 50px;
 	
 	//navbar elements colour
@@ -104,4 +108,24 @@ body {
 	margin-top: 20px;
 	margin-bottom: 40px;
 
+}
+
+// FOOTER
+
+footer {
+	background-color: #f0f0f1;
+	color: #6d6d74;
+	display: inline-block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+
+}
+
+.elements{
+	a{
+	color: #6d6d74;
+	}
 }
