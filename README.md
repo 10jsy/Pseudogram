@@ -13,7 +13,7 @@ Use these details to log in to the app and navigate.
 
 Checklist:
 
-1. Views: ✓
+1. Views: 
 a. A home page.
 b. A contact page with contact form.
 c. Resource pages for all of your appropriate model resources. Only provide

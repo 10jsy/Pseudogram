@@ -2,10 +2,7 @@ Rails.application.routes.draw do
 	devise_for :users, :controllers => { registrations: 'registrations' }
 
 	# resource route for posts controller
-	resources :posts do
-		# route for comments inside posts
-		resources :comments
-	end
+	resources :posts
 
 	resources :contacts, only: [:new, :create]
 
