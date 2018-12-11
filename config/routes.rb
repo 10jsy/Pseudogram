@@ -7,7 +7,12 @@ Rails.application.routes.draw do
 		resources :comments
 	end
 
+	resources :contacts, only: [:new, :create]
+
 	# posts_controller index action set to root route
 	root 'posts#index'
+
+	# route to about page
+	get 'about/new'
 
 end
