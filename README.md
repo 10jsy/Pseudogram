@@ -8,6 +8,8 @@ where username is the test account username, email is the test account email and
 
 Use these details to log in to the app and navigate.
 
+Or click the 'Sign up' button and register yourself an account.
+
 
 
 
